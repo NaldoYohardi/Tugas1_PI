@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Registrasi </title>
+  </head>
+  <body>
+    <form action="regist.php" method="POST">
+      <fieldset>
+        <legend> Registrasi </legend>
+        <p>
+          <label> Nama: </label>
+          <input type="text" name="name" placeholder="Full Name..." />
+        </p>
+
+        <p>
+          <label> Username: </label>
+          <input type="text" name="username" placeholder="Username..." />
+        </p>
+
+        <p>
+          <label> Email: </label>
+          <input type="email" name="email" placeholder="Your email...">
+        </p>
+
+        <p>
+          <label> Password: </label>
+          <input type="password" name="password" placeholder="Password..." />
+        </p>
+
+        <p>
+          <label> Jenis Kelamin: </label>
+          <label><input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki </label>
+          <label><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan </label>
+        </p>
+      </fieldset>
+    </form>
+  </body>
+</html>
