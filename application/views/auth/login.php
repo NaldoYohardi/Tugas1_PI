@@ -56,7 +56,7 @@
                     Sign Up now to login to the website.
                 </p>
                 <?php if($this->session->flashdata('errors')): ?>
-                <div class="alert alert-danger"><?php echo $this->session->flashdata('errors') ?>
+                  <div class="alert alert-danger"><?php echo $this->session->flashdata('errors') ?>
                 <?php endif; ?>
                 <form action="<?php echo base_url('userdata/regist')?>" method="POST">
                     <ul>
