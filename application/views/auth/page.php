@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <div class="col-sm-2">
-    <a href="logout" class="btn btn-info" data-toggle="modal"><span>Logout</span></a>
+    <a href="logout" class="btn btn-success"><span>Logout</span></a>
   </div>
   <body>
     <div class="container">
