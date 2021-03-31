@@ -90,7 +90,6 @@
         document.getElementById("remember").value = 1;
       } else {
         document.getElementById("remember").value = 0;
-
       }
     }
 </script>
