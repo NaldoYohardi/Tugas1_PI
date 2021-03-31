@@ -18,9 +18,9 @@
     <h2>Data User</h2>
     <ul class="responsive-table">
       <li class="table-header">
-        <div class="col col-1">Name</div>
-        <div class="col col-2">Username</div>
-        <div class="col col-3">Email</div>
+        <div class="col col-1">ID</div>
+        <div class="col col-2">Name</div>
+        <div class="col col-3">Username</div>
         <div class="col col-4">Email</div>
         <div class="col col-5">Action</div>
       </li>
