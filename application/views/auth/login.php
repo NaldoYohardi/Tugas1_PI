@@ -31,10 +31,9 @@
         Remember me  <input type="checkbox" name="remember" value="0" id="remember" onclick="set()">
 
       </p>
-      <p id="demo"></p>
       </fieldset>
 </form>
-
+<a href="<?php echo base_url('userdata/register') ?>"><input type="submit" name="submit" value="Register"/></a>
   </body>
   <script type="text/javascript">
 

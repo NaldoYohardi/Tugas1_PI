@@ -37,5 +37,6 @@
         </p>
       </fieldset>
     </form>
+    <a href="<?php echo base_url('userdata/index') ?>"><input type="submit" name="submit" value="Login"/></a>
   </body>
 </html>
