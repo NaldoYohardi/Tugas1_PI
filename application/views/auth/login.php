@@ -27,24 +27,24 @@
                   <div class="alert alert-danger"><?php echo $this->session->flashdata('errors') ?>
                 <?php endif; ?>
                 <form action="<?php echo base_url('userdata/do_login') ?>" method="POST">
-                    <ul>
-                        <li>
+                    <tr>
+                        <td>
                             <label> Username: </label>
                             <input type="text" name="username" placeholder="Enter Username"/>
-                        </li>
-                        <li>
+                        </td>
+                        <td>
                           <label> Password: </label>
                           <input type="password" name="password" placeholder="Enter Password"/>
-                        </li>
-                        <li>
+                        </td>
+                        <td>
                           <label><input type="checkbox" name="remember" value="remember"/> Remember me </label>
-                        </li>
-                        <li>
+                        </td>
+                        <td>
                           <center>
                           <input type="submit" value="Login" class="button" />
                           </center>
-                        </li>
-                    </ul>
+                        </td>
+                    </tr>
                 </form>
             </div>
             <div id="register" class="form-action hide">
@@ -56,29 +56,29 @@
                   <div class="alert alert-danger"><?php echo $this->session->flashdata('errors') ?>
                 <?php endif; ?>
                 <form action="<?php echo base_url('userdata/regist')?>" method="POST">
-                    <ul>
-                      <li>
+                    <tr>
+                      <td>
                         <label> Nama: </label>
                         <input type="text" name="name" placeholder="Enter Full Name" />
-                      </li>
-                      <li>
+                      </td>
+                      <td>
                         <label> Username: </label>
                         <input type="text" name="username" placeholder="Enter Username" />
-                      </li>
-                      <li>
+                      </td>
+                      <td>
                         <label> Email: </label>
                         <input type="email" name="email" placeholder="Enter Your Email">
-                      </li>
-                      <li>
+                      </td>
+                      <td>
                         <label> Password: </label>
                         <input type="password" name="password" placeholder="Enter Password" />
-                      </li>
-                      <li>
+                      </td>
+                      <td>
                         <label> Jenis Kelamin: </label>
                         <label><input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki </label>
                         <label><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan </label>
-                      </li>
-                    </ul>
+                      </td>
+                    </tr>
                 </form>
             </div>
         </div>
@@ -90,7 +90,6 @@
         document.getElementById("remember").value = 1;
       } else {
         document.getElementById("remember").value = 0;
-
       }
     }
 </script>
