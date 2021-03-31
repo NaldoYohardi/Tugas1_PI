@@ -49,4 +49,18 @@ class User_model extends CI_Model {
     $this->db->empty_table('remember');
   }
 
+  public function get_users(){
+    $query = $this->db->query("SELECT * FROM user");
+    return $query->result();
+  }
+
+  public function update_data($where, $data, $tabel)
+  	{
+  		$this->db->where($where);
+  		$this->db->update($tabel, $data);
+  	}
+
+  public function delete_user($id){
+    return $this->db->query("DELETE FROM user WHERE id = '$id'");
+  }
 }
