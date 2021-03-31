@@ -23,7 +23,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
+<<<<<<< HEAD
 $config['base_url'] = 'https://localhost/Tugas1_PI';
+=======
+$config['base_url'] = 'http://localhost/Tugas1_PI/';
+>>>>>>> 6575d0ffa8e2c40a09c3fb5bbc94ce9882a74dbb
 
 /*
 |--------------------------------------------------------------------------
