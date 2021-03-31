@@ -116,7 +116,6 @@ form input[type=email] {
     color: #ffffff;
     text-align: center;
     border-radius: 5px;
-    /*box-shadow: 0px 3px 1px #2075aa;*/
   	-webkit-transition: all 0.15s linear;
 	  -moz-transition: all 0.15s linear;
 	  transition: all 0.15s linear;
@@ -124,23 +123,19 @@ form input[type=email] {
 
 .button:hover {
   background: #1e75aa;
-  /*box-shadow: 0 3px 1px #237bb2;*/
 }
 
 .button:active {
   background: #136899;
-  /*box-shadow: 0 3px 1px #0f608c;*/
 }
 
 ::-webkit-input-placeholder {
   color: black;
 }
 :-moz-placeholder {
-  /* Firefox 18- */
   color: black;
 }
 ::-moz-placeholder {
-  /* Firefox 19+ */
   color: black;
 }
 :-ms-input-placeholder {
@@ -183,16 +178,19 @@ h2 {
     color: #1a1a1a;
   }
   .col-1 {
-    flex-basis: 20%;
+    flex-basis: 5%;
   }
   .col-2 {
-    flex-basis: 20%;
+    flex-basis: 25%;
   }
   .col-3 {
-    flex-basis: 35%;
+    flex-basis: 30%;
   }
   .col-4 {
-    flex-basis: 15%;
+    flex-basis: 20%;
+  }
+  .col-5 {
+    flex-basis: 10%;
   }
 
   @media all and (max-width: 767px) {

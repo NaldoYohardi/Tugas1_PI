@@ -36,10 +36,6 @@
                           <input type="password" name="password" placeholder="Enter Password"/>
                         </li>
                         <li>
-                          <label> Email: </label>
-                          <input type="email" name="email" placeholder="Enter Email"/>
-                        </li>
-                        <li>
                           <label><input type="checkbox" name="remember" value="remember"/> Remember me </label>
                         </li>
                         <li>
@@ -60,10 +56,6 @@
                 <?php endif; ?>
                 <form action="<?php echo base_url('userdata/regist')?>" method="POST">
                     <ul>
-                      <li>
-                        <label> Nama: </label>
-                        <input type="text" name="name" placeholder="Enter Full Name" />
-                      </li>
                       <li>
                         <label> Username: </label>
                         <input type="text" name="username" placeholder="Enter Username" />
