@@ -270,3 +270,6 @@ h2 {
   .hide{
     display: none;
     }
+    .modal {
+    color: black;
+  }
