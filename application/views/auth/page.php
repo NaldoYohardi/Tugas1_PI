@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title> Profile </title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/style.css ?>">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
     <style media="screen">
     .hide{
       display: none;

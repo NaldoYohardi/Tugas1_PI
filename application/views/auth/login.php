@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>Main Menu</title>
     <script type="text/javascript" src="assets/js/animation.js">alert("Berhasil")</script>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/style.css ?>">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
 </head>
 <body>
     <div class="container">
@@ -57,6 +58,10 @@
                 <form action="<?php echo base_url('userdata/regist')?>" method="POST">
                     <ul>
                       <li>
+                        <label> Nama: </label>
+                        <input type="text" name="name" placeholder="Enter Full Name" />
+                      </li>
+                      <li>
                         <label> Username: </label>
                         <input type="text" name="username" placeholder="Enter Username" />
                       </li>
@@ -80,7 +85,6 @@
     </div>
 </body>
 <script type="text/javascript">
-
     function set(){
       if(document.getElementById("remember").value == 0) {
         document.getElementById("remember").value = 1;

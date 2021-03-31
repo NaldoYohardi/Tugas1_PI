@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Userdata extends CI_Controller {
   public function index() {
-      $this->load->view("auth/page");
+      $this->load->view("auth/login");
   }
 
   public function register() {
@@ -56,7 +56,7 @@ class Userdata extends CI_Controller {
 
         $this->session->set_userdata($data);
         $this->session->set_flashdata('login_success','anda berhasil login');
-        $this->load->view('auth/page',$user);
+        $this->load->view("auth/page",$user);
     }
     }
 	}
@@ -107,8 +107,7 @@ class Userdata extends CI_Controller {
 }
 
 public function logout() {
-  $this->user_model->truncate_tb();
-  redirect("userdata/index",$remember);
+  $this->load->view("auth/login");
 }
 
 public function edit_user($id){
