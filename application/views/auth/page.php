@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title> Profile </title>
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/style.css ?>">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -39,13 +40,13 @@
         } ?>
         </div>
         <div class="col col-5" >
-          <a href="#editModal"  data-toggle="modal" method="post" onclick="<?php $this->session->set_tempdata('data',$o->id); ?>"><button class="btn btn-primary"  type="submit" name="submit"> Edit </button></a>
-          <a href="#deleteModal"  data-toggle="modal"method="post" onclick="<?php $this->session->set_tempdata('data',$o->id); ?>"><button class="btn btn-danger" type="submit" name="submit"> Delete </button></a>
+          <a href="#editModal<?php echo $o->id; ?>"  data-toggle="modal" method="post" onclick="<?php $this->session->set_tempdata('data',$o->id); ?>"><button class="btn btn-primary"  type="submit" name="submit"> Edit </button></a>
+          <a href="#deleteModal<?php echo $o->id; ?>"  data-toggle="modal"method="post" onclick="<?php $this->session->set_tempdata('data',$o->id); ?>"><button class="btn btn-danger" type="submit" name="submit"> Delete </button></a>
         </div>
       </li>
 
       <!-- Edit -->
-      <div id="editModal" class="modal">
+      <div id="editModal<?php echo $o->id; ?>" class="modal">
         <div class="modal-dialog">
           <div class="modal-content">
             <form action="<?php echo base_url(). 'userdata/edit_user/'.$this->session->tempdata('data');?>" method="post">
@@ -82,7 +83,7 @@
       </div>
 
       <!-- Delete -->
-      <div id="deleteModal" class="modal">
+      <div id="deleteModal<?php echo $o->id; ?>" class="modal">
         <div class="modal-dialog">
           <div class="modal-content">
             <form action="<?php echo base_url(). 'userdata/delete_user/'.$this->session->tempdata('data');?>" method="post">
