@@ -78,11 +78,7 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-<<<<<<< HEAD
 	'database' => 'tugas1_pi',
-=======
-	'database' => '',
->>>>>>> 6575d0ffa8e2c40a09c3fb5bbc94ce9882a74dbb
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
