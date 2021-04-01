@@ -44,7 +44,7 @@ body {
   width: 206px;
   border-radius: 15px 15px 0px 0px;
 }
-.tabs a.active {
+.tabs a.active, a:hover{
   background: #289672;
   border-right: none;
   -webkit-transition: all 0.5s linear;
