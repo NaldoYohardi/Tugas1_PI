@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <title>Main Menu</title>
-
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/style.css ?>">
     <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
     <script type="text/javascript" src="Bootstrap/js/jquery.js"></script>
@@ -11,20 +10,22 @@
 <script type="text/javascript" src="Bootstrap/js/proper.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="tabs">
         <div class="flat-form">
-            <ul class="tabs" id="tabs">
+            <ul class="tabs" >
                 <li>
-                    <a id="log" href="#login" class="bn active" name="submit" onclick="myFunction">Login</a>
+                    <a href="#login" class="bn active" name="submit" onclick="document.getElementById('regis').style.display='none';document.getElementById('login').style.display='block'">Login</a>
                 </li>
                 <li>
-                    <a id="reg" href="#register" class="bn" name="submit" onclick="myFunction">Register</a>
+                    <a href="#register" class="bn" name="submit" onclick="document.getElementById('login').style.display='none';document.getElementById('regis').style.display='block'">Register</a>
                 </li>
             </ul>
-            <div id="login" class="fn form-action">
+            <div id="login"  class="fn form-action">
               <h1>Welcome Back</h1>
               <p>
                   Please login to enter the website.
@@ -53,7 +54,7 @@
                     </tr>
                 </form>
             </div>
-            <div id="register" class="fn form-action hide">
+            <div id="regis"  class="fn form-action hide">
                 <h1>Register</h1>
                 <p>
                     Sign Up now to login to the website.
@@ -89,24 +90,22 @@
             </div>
         </div>
     </div>
-    <button id="demo" type="button" class="" name="button" onclick="Function()">test</button>
+
 </body>
 <script type="text/javascript">
 var header = document.getElementById("tabs");
 var btns = header.getElementsByClassName("bn");
-var frm = header.getElementsByClassName("fn");
+var log = header.getElementsByClassName('fn');
+
   for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function() {
     var current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
-    
-    var current = document.getElementsByClassName("hide");
-    current[0].className = current[0].className.replace(" hide", "");
-    this.className += " hide";
+
+
 });
 }
-
 
 </script>
 </html>
