@@ -19,10 +19,10 @@
         <div class="flat-form">
             <ul class="tabs" >
                 <li>
-                    <a href="#login" class="bn active" name="submit" onclick="document.getElementById('regis').style.display='none';document.getElementById('login').style.display='block'">Login</a>
+                    <a href="#login" class="bn active" name="submit" onclick="changelog()">Login</a>
                 </li>
                 <li>
-                    <a href="#register" class="bn" name="submit" onclick="document.getElementById('login').style.display='none';document.getElementById('regis').style.display='block'">Register</a>
+                    <a href="#register" class="bn" name="submit" onclick="changereg()">Register</a>
                 </li>
             </ul>
             <div id="login"  class="fn form-action">
@@ -105,6 +105,16 @@ var log = header.getElementsByClassName('fn');
 
 
 });
+}
+
+function changelog(){
+  document.getElementById('regis').style.display='none';
+  document.getElementById('login').style.display='block'
+}
+
+function changereg() {
+  document.getElementById('login').style.display='none';
+  document.getElementById('regis').style.display='block'
 }
 
 </script>
