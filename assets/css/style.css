@@ -7,9 +7,10 @@ body {
 }
 .flat-form {
   background: #289672;
-  margin: 25px auto;
+  margin: auto;
+  padding: 0px 0px 25px 0px;
   width: 500px;
-  height: 500px;
+  height: auto;
   position: relative;
   font-family: 'Helvetica';
   border-radius: 15px;
@@ -47,9 +48,9 @@ body {
 .tabs a.active, a:hover{
   background: #289672;
   border-right: none;
-  -webkit-transition: all 0.5s linear;
-	-moz-transition: all 0.5s linear;
-	transition: all 0.5s linear;
+  -webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	transition: all 0.2s linear;
 }
 .form-action {
   padding: 0 20px;
@@ -273,4 +274,20 @@ h2 {
     }
   .modal {
     color: black;
+  }
+  .button {
+    margin: 10px 0px 0px 0px;
+  }
+  .alert-danger {
+    color: #fff;
+    background-color: rgb(235, 0, 0);
+    width: auto;
+    margin: 10px;
+    padding-top: 1px;
+    height: auto;
+    text-align: center;
+    position: relative;
+    font-family: 'Helvetica';
+    font-weight: bold;
+    border-radius: 15px;
   }

@@ -7,7 +7,7 @@ class Userdata extends CI_Controller {
   }
 
   public function register() {
-    $this->load->view("auth/regist");
+    $this->load->view("auth/login");
   }
 
 	public function do_login()
@@ -66,13 +66,13 @@ class Userdata extends CI_Controller {
     $this->form_validation->set_rules('username','Username','trim|required');
     $this->form_validation->set_rules('email','Email','trim|required');
     $this->form_validation->set_rules('password','Password','trim|required');
-    $this->form_validation->set_rules('jenkel','jenkel','trim|required');
+    $this->form_validation->set_rules('jenkel','Jenis Kelamin','trim|required');
 
     $username = $this->input->post('username');
     $check = $this->user_model->check_user($username);
     if($this->form_validation->run()==FALSE){
       $data = array(
-        'errors' => validation_errors()
+        'error' => validation_errors()
       );
       $this->session->set_flashdata($data);
 
@@ -89,7 +89,7 @@ class Userdata extends CI_Controller {
         redirect("userdata/index");
       } else {
         $data = array(
-          'errors' => "Username or Password error occured."
+          'error' => "Username or Password error occured."
         );
         $this->session->set_flashdata($data);
 
@@ -97,7 +97,7 @@ class Userdata extends CI_Controller {
     }
   } else {
         $data = array(
-          'errors' => "Username Not Found."
+          'error' => "Username Not Found."
         );
         $this->session->set_flashdata($data);
 

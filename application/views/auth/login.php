@@ -13,11 +13,10 @@
     <style>
     </style>
 </head>
-
 <body>
     <div class="container" id="tabs">
         <div class="flat-form">
-            <ul class="tabs" >
+            <ul class="tabs">
                 <li>
                     <a href="#login" class="bn active" name="submit" onclick="changelog()">Login</a>
                 </li>
@@ -59,8 +58,8 @@
                 <p>
                     Sign Up now to login to the website.
                 </p>
-                <?php if($this->session->flashdata('errors')): ?>
-                  <div class="alert alert-danger"><?php echo $this->session->flashdata('errors') ?>
+                <?php if($this->session->flashdata('error')): ?>
+                  <div class="alert alert-danger"><?php echo $this->session->flashdata('error') ?></div>
                 <?php endif; ?>
                 <form action="<?php echo base_url('userdata/regist')?>" method="POST">
                     <tr>
@@ -82,8 +81,13 @@
                       </td>
                       <td>
                         <label> Jenis Kelamin: </label>
-                        <label><input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki </label>
-                        <label><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan </label>
+                        <label><input type="radio" name="jenkel" value="0" /> Laki-laki </label>
+                        <label><input type="radio" name="jenkel" value="1" /> Perempuan </label>
+                      </td>
+                      <td>
+                        <center>
+                        <input type="submit" value="Register" class="button" />
+                        </center>
                       </td>
                     </tr>
                 </form>
@@ -96,26 +100,20 @@
 var header = document.getElementById("tabs");
 var btns = header.getElementsByClassName("bn");
 var log = header.getElementsByClassName('fn');
-
-  for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-
-
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
 });
 }
-
 function changelog(){
   document.getElementById('regis').style.display='none';
   document.getElementById('login').style.display='block'
 }
-
 function changereg() {
   document.getElementById('login').style.display='none';
   document.getElementById('regis').style.display='block'
 }
-
 </script>
 </html>
