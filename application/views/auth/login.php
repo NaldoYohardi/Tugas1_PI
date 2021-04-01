@@ -30,9 +30,9 @@
               <p>
                   Please login to enter the website.
               </p>
-                <?php if($this->session->flashdata('errors')): ?>
-                  <div class="alert alert-danger"><?php echo $this->session->flashdata('errors') ?>
-                <?php endif; ?>
+              <?php if($this->session->flashdata('errors')): ?>
+                <div class="alert alert-danger"><?php echo $this->session->flashdata('errors') ?></div>
+              <?php endif; ?>
                 <form action="<?php echo base_url('userdata/do_login') ?>" method="POST">
                     <tr>
                         <td>
